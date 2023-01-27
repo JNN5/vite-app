@@ -39,3 +39,4 @@ yarn audit
   - pages: here go the different pages. A page is a frontend route
   - mocks: here we define the API mocks for our unit tests using MSW
   - tests: here we define common test setup scripts and utils
+- e2e: end2end tests written with playwright
