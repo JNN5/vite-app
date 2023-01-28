@@ -1,11 +1,11 @@
-import reactLogo from "./assets/react.svg";
-import { useAppDispatch, useAppSelector } from "./app/hooks";
-import { amountAdded } from "./features/counter/counter-slice";
-import { useFetchBreedsQuery } from "./features/dogs/dogs-api-slice";
-import "./App.css";
 import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { amountAdded } from "../../features/counter/counter-slice";
+import { useFetchBreedsQuery } from "../../features/dogs/dogs-api-slice";
+import reactLogo from "../../assets/react.svg";
+import "./index.css";
 
-function App() {
+export default function Home() {
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 
@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -67,8 +67,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </div>
+    </>
   );
 }
-
-export default App;
