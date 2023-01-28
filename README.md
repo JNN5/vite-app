@@ -29,7 +29,6 @@ yarn audit
   - State: Redux Toolkit https://redux-toolkit.js.org/
   - Data fetching: RTK Query (Redux Toolkit) https://redux-toolkit.js.org/rtk-query/overview
   - UI: Ant Design https://ant.design/
-- CLI: pnpm (optional, npm and yarn work too) https://pnpm.io/
 
 ## Folders
 - e2e: end2end tests written with playwright
@@ -45,4 +44,5 @@ yarn audit
 
 ## Routing
 Pages need to be registered as routes in the router. The router ocnfiguration is found in src/app/router.tsx.
+
 Use the loadable component to asynchronously (lazy) load the page (via React Suspense)
