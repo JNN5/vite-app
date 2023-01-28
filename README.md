@@ -32,11 +32,17 @@ yarn audit
 - CLI: pnpm (optional, npm and yarn work too) https://pnpm.io/
 
 ## Folders
+- e2e: end2end tests written with playwright
 - public: all static content that doesn't have to be transpiled goes here
 - src: 
-  - app: state management and hooks
+  - app: router, state management and hooks
+  - assets: icons and graphics that need to be processed
+  - components: react components that are reused in different pages
   - features: implementation of specific state slices
-  - pages: here go the different pages. A page is a frontend route
   - mocks: here we define the API mocks for our unit tests using MSW
-  - tests: here we define common test setup scripts and utils
-- e2e: end2end tests written with playwright
+  - pages: here go the different pages. A page is a frontend route
+  - test-setup: here we define common test setup scripts and utils
+
+## Routing
+Pages need to be registered as routes in the router. The router ocnfiguration is found in src/app/router.tsx.
+Use the loadable component to asynchronously (lazy) load the page (via React Suspense)
