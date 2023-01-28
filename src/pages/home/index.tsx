@@ -5,7 +5,7 @@ import { useFetchBreedsQuery } from "../../features/dogs/dogs-api-slice";
 import reactLogo from "../../assets/react.svg";
 import "./index.css";
 
-export default function Home() {
+export default function Page() {
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 

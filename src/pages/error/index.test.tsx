@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { render } from "../../test-setup/test-utils";
 
-import Page from "./";
+import Page from ".";
 
 describe("Page", () => {
   it("renders page", () => {
