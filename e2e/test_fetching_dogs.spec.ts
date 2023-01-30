@@ -5,8 +5,8 @@ test("homepage works", async ({ page }) => {
   await page.goto("http://localhost:4000/");
 
   // Then
-  await expect(page.getByText("Number of dogs fetched: 10")).toBeVisible();
-  await expect(await page.screenshot()).toMatchSnapshot(); // because react logo spinns
+  await expect(page.getByRole("img", { name: "Breed 0" })).toBeVisible();
+  await expect(await page.screenshot()).toMatchSnapshot();
 
   // When
   await page.getByRole("button", { name: "count is 0" }).click();
