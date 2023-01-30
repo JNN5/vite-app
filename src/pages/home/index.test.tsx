@@ -1,6 +1,5 @@
 import { screen } from "@testing-library/react";
-import { render } from "../../test-setup/test-utils";
-import userEvent from "@testing-library/user-event";
+import { render, userEvent } from "../../test-setup/test-utils";
 
 import Page from ".";
 
@@ -28,5 +27,22 @@ describe("Interactions", () => {
 
     // Then
     expect(screen.getByText("count is 3")).toBeVisible();
+  });
+
+  it("select displayes selected amount of dogs", async () => {
+    // Given
+    render(<Page />);
+
+    expect(screen.getByRole("option", { name: "10" }).selected).toBe(true);
+    expect(screen.getAllByRole("option").length).toBe(4);
+
+    // When
+    await userEvent.selectOptions(
+      screen.getByRole("combobox"),
+      screen.getByRole("option", { name: "5" })
+    );
+
+    // Then
+    expect(screen.getByRole("option", { name: "5" }).selected).toBe(true);
   });
 });
