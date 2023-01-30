@@ -10,6 +10,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
     "plugin:prettier/recommended",
+    "plugin:playwright/playwright-test"
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",
@@ -22,6 +23,7 @@ module.exports = {
     "react",
     "react-hooks",
     "prettier",
+    "playwright"
   ],
   rules: {},
   settings: {
