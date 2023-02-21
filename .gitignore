@@ -28,3 +28,4 @@ dist-ssr
 /playwright-report/
 /playwright/.cache/
 /coverage/
+.dccache
